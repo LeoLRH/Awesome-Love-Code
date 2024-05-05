@@ -62,27 +62,6 @@
     <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio>
 
     <script>
-        // 指定时间
-        var specifiedDate = new Date("2024-03-02T020:02:00");
-        // 更新时间差
-        function updateClock() {
-            var currentTime = new Date();
-            var timeDifference = currentTime - specifiedDate;
-            var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            timeDifference -= days * (1000 * 60 * 60 * 24);
-            var hours = Math.floor(timeDifference / (1000 * 60 * 60));
-            timeDifference -= hours * (1000 * 60 * 60);
-            var minutes = Math.floor(timeDifference / (1000 * 60));
-            timeDifference -= minutes * (1000 * 60);
-            var seconds = Math.floor(timeDifference / 1000);
-            var timeString = days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
-            // 更新页面上的时间显示
-            document.getElementById("clock").innerHTML = timeString;
-        }
-        // 每秒更新一次时间
-        setInterval(updateClock, 1000);
-        // 页面加载时立即更新一次时间
-        updateClock();
         (function () {
             var canvas = $('#canvas');
 
