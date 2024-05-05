@@ -53,6 +53,33 @@
                 Crystal 和 Leo 相遇已过
                 <div id="clock" data-date="2024-03-02T20:02:00"></div>
             </div>
+            <script>
+    // 页面加载完毕时执行
+    document.addEventListener("DOMContentLoaded", function() {
+        // 获取 clock 元素
+        var clockElement = document.getElementById("clock");
+
+        // 获取指定的时间
+        var specifiedDate = new Date(clockElement.getAttribute("data-date"));
+
+        // 更新时间差并显示在 clock 元素中
+        setInterval(function() {
+            var currentTime = new Date();
+            var timeDifference = currentTime - specifiedDate;
+
+            var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            timeDifference -= days * (1000 * 60 * 60 * 24);
+            var hours = Math.floor(timeDifference / (1000 * 60 * 60));
+            timeDifference -= hours * (1000 * 60 * 60);
+            var minutes = Math.floor(timeDifference / (1000 * 60));
+            timeDifference -= minutes * (1000 * 60);
+            var seconds = Math.floor(timeDifference / 1000);
+
+            var timeString = days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+            clockElement.textContent = timeString;
+        }, 1000);
+    });
+</script>
             
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
