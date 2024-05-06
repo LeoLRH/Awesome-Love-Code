@@ -31,6 +31,7 @@ a {
 	left: 60px;
 	top: 80px;
 	position: absolute;
+	margin-bottom: 20px; /* 增加下边距，与时钟内容隔开 */
 }
 
 #code {
@@ -44,6 +45,7 @@ a {
 	top: 550px;
 	font-size: 28px;
 	display: none;
+	margin-top: 20px; /* 增加上边距，与文字内容隔开 */
 }
 
 #clock-box a {
