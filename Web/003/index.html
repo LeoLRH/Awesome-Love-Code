@@ -54,7 +54,18 @@
                 <div id="clock" data-date="2024-03-02T20:00:00"></div>
             </div>
             <script>
-                // 页面加载完毕时执行
+
+            </script>
+            
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+
+    </div>
+
+    <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio>
+
+    <script>
+                        // 页面加载完毕时执行
                 document.addEventListener("DOMContentLoaded", function() {
                 // 获取 clock 元素
                 var clockElement = document.getElementById("clock");
@@ -75,16 +86,6 @@
                     clockElement.textContent = timeString;
                 }, 1000);
                 });
-            </script>
-            
-            <canvas id="canvas" width="1100" height="680"></canvas>
-        </div>
-
-    </div>
-
-    <audio preload="auto" autoplay="" id="media" src="love.mp3" autoplay preload loop="loop"></audio>
-
-    <script>
         (function () {
             var canvas = $('#canvas');
 
